@@ -1,0 +1,23 @@
+
+@{
+    ViewBag.Title = "Administration";
+}
+
+<h2>Administration</h2>
+
+<div class="adminButtons">
+   <div>
+       @Html.ActionLink("Room Admin", "RoomsList", null, new { @class = "btn btn-lg btn-success" })
+       @Html.ActionLink("Customer Admin", "CustomersList", null, new { @class = "btn btn-lg btn-primary" })
+       @Html.ActionLink("Reservation Admin", "ReservationsList", null, new { @class = "btn btn-lg btn-warning" })
+       @Html.ActionLink("Offer Admin", "OfferList", null, new { @class = "btn btn-lg btn-info" })
+       @Html.ActionLink("Offer Type Admin", "OfferTypeList", null, new { @class = "btn btn-lg btn-default" })
+    </div>
+
+
+</div>
+
+
+
+
+

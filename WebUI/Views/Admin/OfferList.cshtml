@@ -1,0 +1,78 @@
+@model IEnumerable<MidTermSolution.Models.Offer>
+
+@{
+    ViewBag.Title = "Offer List";
+}
+
+<h2>Offer List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateOffer", null, new { @class = "btn btn-success" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OfferCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OfferTypeID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OfferDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AppliesToRoomID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Value)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MinSpend)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MultipleUse)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AssignedTo)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.OfferCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OfferTypeID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OfferDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AppliesToRoomID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Value)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MinSpend)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MultipleUse)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssignedTo)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditOffer", new { id = item.OfferId }, new { @class = "btn btn-success" })
+            @Html.ActionLink("Details", "DetailsOffer", new { id = item.OfferId }, new { @class = "btn btn-success" })
+            @Html.ActionLink("Delete", "DeleteOffer", new { id = item.OfferId }, new { @class = "btn btn-success" })
+        </td>
+    </tr>
+}
+
+</table>
+
+
+@Html.ActionLink("Back to Admin", "Index", null, new { @class = "btn btn-success" })

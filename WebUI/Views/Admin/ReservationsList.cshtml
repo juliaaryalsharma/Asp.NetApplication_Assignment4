@@ -1,0 +1,42 @@
+@model IEnumerable<MidTermSolution.Models.Reservation>
+
+@{
+    ViewBag.Title = "Reservations";
+}
+
+<h2>Reservations List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateReservation", null, new { @class = "btn btn-success" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Reservtion Date
+        </th>
+        <th>
+            Customer ID
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ReservationDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CustomerID)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditReservation", new { id = item.ReservationID }, new { @class = "btn btn-success" })
+            @Html.ActionLink("Details", "DetailsReservation", new { id = item.ReservationID }, new { @class = "btn btn-success" })
+            @Html.ActionLink("Delete", "DeleteReservation", new { id = item.ReservationID }, new { @class = "btn btn-success" })
+        </td>
+    </tr>
+}
+
+</table>
+
+@Html.ActionLink("Back to Admin", "Index", null, new { @class = "btn btn-success" })
+

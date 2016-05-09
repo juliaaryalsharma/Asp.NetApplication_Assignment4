@@ -1,0 +1,99 @@
+@model IEnumerable<MidTermSolution.Models.Room>
+@{
+    ViewBag.Title = "Home page";
+}
+
+<!-- Header Carousel -->
+<div id="myCarousel" class="carousel slide">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+        <li data-target="#myCarousel" data-slide-to="3"></li>
+        <li data-target="#myCarousel" data-slide-to="4"></li>
+    </ol>
+    <div class="carousel-inner">
+        <div class="item active">
+            <img src="/img/hotel1.jpg" alt="" />
+            <div class="container active">
+                <div class="carousel-caption">
+                    <h1></h1>
+                    <p class="lead">WELCOME TO THE SMOKJ HOTEL</p>
+                    <p>A luxury collection of boutique, country house hotels and spa hotels</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="/img/hotel2.jpg" alt="" />
+            <div class="container active">
+                <div class="carousel-caption">
+                    <h1>ELEGANT EXPERIENCE</h1>
+                    <p class="lead">For the best in all your travels needs</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="/img/hotel3.jpg" alt="" />
+            <div class="container active">
+                <div class="carousel-caption">
+                    <h1>CLASSIC TRILOGY</h1>
+                    <p class="lead">Experience a refreshing stay in our comfortable rooms</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="/img/hotel4.jpg" alt="" />
+            <div class="container active">
+                <div class="carousel-caption">
+                    <h1>FACILITIES</h1>
+                    <p class="lead">Enjoy the luxurious facilities combined with the privacy of elegantly furnished</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="/img/hotel5.jpg" alt="" />
+            <div class="container active">
+                <div class="carousel-caption">
+                    <h1>SUITS</h1>
+                    <p class="lead">Infinite number of unique experiences</a></p>
+                </div>
+            </div>
+        </div>
+    </div><!--end inner carousel-->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+</div><!--end myCarousel-->
+
+<div class="row">
+    <div class="col-md-4">
+        <h2>ROOMS</h2>
+        <p>
+            rooms â€“ all with natural daylight â€“ take care of meetings and conventions. Our largest holds 160 and we can also accommodate more intimate groups.
+            We have a special menu, which changes daily. For breaks in meetings, our terrace makes a relaxing spots.
+        </p>
+        <p><a class="btn btn-default" href="/Rooms/Index">Read more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>CUSTOMERS</h2>
+        <p>Each satisfied customer has classified our hotel as the No. 1 hotel overall in our survey this year. Is it any surprise guests rhapsodize about its private pools, flanked by visiting peacocks and parakeets</p>
+        <p><a class="btn btn-default" href="/Customers/Index">Read more &raquo;</a></p>
+    </div>
+    <div class="col-md-4">
+        <h2>RESERVATIONS</h2>
+        <p>Our One Bedroom Suite Twin is approximately 650 square feet of living space with a separate bedroom & living room.The bedroom has two twin beds and the living room has a full kitchen, balcony and seating with double sofa with individually controlled air conditioning. !Reserve Now</p>
+        <p><a class="btn btn-default" href="/Reservations/Index">Read more &raquo;</a></p>
+    </div>
+</div>
+<!-- jQuery -->
+<script src="js/jquery.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<!-- Script to Activate the Carousel -->
+<script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+</script>

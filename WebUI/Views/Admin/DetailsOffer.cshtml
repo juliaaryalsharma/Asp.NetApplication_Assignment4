@@ -1,0 +1,82 @@
+@model MidTermSolution.Models.Offer
+
+@{
+    ViewBag.Title = "DetailsOffer";
+}
+
+<h2>DetailsOffer</h2>
+
+<div>
+    <h4>Offer</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OfferCode)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OfferCode)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OfferTypeID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OfferTypeID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OfferDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OfferDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AppliesToRoomID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AppliesToRoomID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Value)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Value)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MinSpend)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MinSpend)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MultipleUse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MultipleUse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AssignedTo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssignedTo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditOffer", new { id = Model.OfferId }, new { @class = "btn btn-success" })
+    @Html.ActionLink("Back to List", "OfferList", null, new { @class = "btn btn-success" })
+</p>

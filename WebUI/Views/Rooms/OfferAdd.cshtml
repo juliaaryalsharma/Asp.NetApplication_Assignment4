@@ -1,0 +1,51 @@
+@model IEnumerable<MidTermSolution.Models.Offer>
+
+@{
+    ViewBag.Title = "OfferAdd";
+}
+
+<h2>Add Offer to Booking</h2>
+
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OfferCode)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OfferDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Value)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MinSpend)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.OfferCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OfferDescription)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Value)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MinSpend)
+        </td>
+
+        <td>
+            <a href="@Url.Action("AddOfferToBooking", "Rooms", new { code = item.OfferCode })" class="btn btn-primary col-md-6 col-xs-12 margin-top-10">
+                Add To Booking
+                <span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+            </a>
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,47 @@
+@model IEnumerable<MidTermSolution.Models.OfferType>
+
+@{
+    ViewBag.Title = "Offer Type List";
+}
+
+<h2>Offer Type List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateOfferType", null, new { @class = "btn btn-success" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.OfferModule)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.OfferModule)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditOfferType", new { id = item.OfferTypeId }, new { @class = "btn btn-success" })
+            @Html.ActionLink("Details", "DetailsOfferType", new { id = item.OfferTypeId }, new { @class = "btn btn-success" })
+            @Html.ActionLink("Delete", "DeleteOfferType", new { id = item.OfferTypeId }, new { @class = "btn btn-success" })
+        </td>
+    </tr>
+}
+
+</table>
+
+@Html.ActionLink("Back to Admin", "Index", null, new { @class = "btn btn-success" })

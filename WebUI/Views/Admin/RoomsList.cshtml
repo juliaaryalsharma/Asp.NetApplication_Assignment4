@@ -1,0 +1,54 @@
+@model IEnumerable<MidTermSolution.Models.Room>
+
+@{
+    ViewBag.Title = "Our Rooms";
+}
+
+<h2>Rooms List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "CreateRoom", null, new { @class = "btn btn-success" })
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Image Url
+        </th>
+        <th>
+            Price
+        </th>
+        <th>
+            Unit
+        </th>
+        <th>
+            Room Description
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ImageUrl)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Unit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RoomDescription)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "EditRoom", new { id = item.RoomID }, new { @class = "btn btn-success" })
+            @Html.ActionLink("Details", "DetailsRoom", new { id = item.RoomID }, new { @class = "btn btn-success" })
+            @Html.ActionLink("Delete", "DeleteRoom", new { id = item.RoomID }, new { @class = "btn btn-success" })
+        </td>
+    </tr>
+}
+
+</table>
+
+@Html.ActionLink("Back to Admin", "Index", null, new { @class = "btn btn-success" })
+

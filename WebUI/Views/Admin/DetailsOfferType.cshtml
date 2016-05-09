@@ -1,0 +1,42 @@
+@model MidTermSolution.Models.OfferType
+
+@{
+    ViewBag.Title = "DetailsOfferType";
+}
+
+<h2>DetailsOfferType</h2>
+
+<div>
+    <h4>OfferType</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.OfferModule)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OfferModule)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "EditOfferType", new { id = Model.OfferTypeId }, new { @class = "btn btn-success" })
+    @Html.ActionLink("Back to List", "OfferTypeList", null, new { @class = "btn btn-success" })
+</p>

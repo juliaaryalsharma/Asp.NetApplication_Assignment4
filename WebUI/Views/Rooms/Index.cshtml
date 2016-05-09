@@ -1,0 +1,130 @@
+@model IEnumerable<MidTermSolution.Models.Room>
+
+@{
+    ViewBag.Title = "Rooms";
+}
+<h2>SMOKJ Hotel Rooms</h2>
+<table class="table">
+    <tr>
+        <th>Image</th>
+        <th>Price</th>
+        <th>Room Description</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                <img style="width:15%" src="/img/@item.ImageUrl" alt="@item.RoomDescription" />
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RoomDescription)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.RoomID })
+            </td>
+        </tr>
+    }
+</table>
+<body>
+
+    <!-- Page Content -->
+    <div class="container">
+        <!-- Marketing Icons Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Welcome comfort and luxury
+                </h1>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-check"></i>Relaxing Atmosphere</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>This passion for detail contributes to the intimate, tranquil atmosphere which transforms each room into a pleasant refuge within the bustling city of Waterloo, in a place where guests can relax after a day spent touring and admiring the many beautiful artistic and architectural sites in the city which cradled the Renaissance.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-gift"></i>Comfort At It's Best</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Each bedroom at SMOKJ Hotel has  been individually designed in a fresh  concept mixing tradition, precious fabrics, period furnitures, italian vintage design, original photos, prints and paintings.Rooms  are light and comfortable and well appointed with a writing desk, wireless internet access and flat screen TV's.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4><i class="fa fa-fw fa-compass"></i>Elegant Look And Feel</h4>
+                    </div>
+                    <div class="panel-body">
+                        <p>Designed to inspire rest and relaxation, our sleek, modern guest rooms create a feeling of home with peaceful color tones and mountain chic décor. Each room features a king-sized bed or two queen-sized beds, air conditioning and full-size bathroom with granite counter tops and marble floors.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- /.row -->
+    <!-- Exclusive Designs -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">Exclusive Designs</h2>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="portfolio-item.html">
+                <img class="img-responsive img-portfolio img-hover" src="/img/room_7.jpg" alt="">
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="portfolio-item.html">
+                <img class="img-responsive img-portfolio img-hover" src="/img/room_8.jpg" alt="">
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="portfolio-item.html">
+                <img class="img-responsive img-portfolio img-hover" src="/img/room_9.jpg" alt="">
+            </a>
+        </div>
+        <br>
+        <div class="col-md-4 col-sm-6">
+            <a href="portfolio-item.html">
+                <img class="img-responsive img-portfolio img-hover" src="/img/room_1.jpg" alt="">
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="portfolio-item.html">
+                <img class="img-responsive img-portfolio img-hover" src="/img/room_2.jpg" alt="">
+            </a>
+        </div>
+        <div class="col-md-4 col-sm-6">
+            <a href="portfolio-item.html">
+                <img class="img-responsive img-portfolio img-hover" src="/img/room_3.jpg" alt="">
+            </a>
+        </div>
+    </div>
+    <!-- /.row -->
+    <!-- /.row -->
+    </div>
+    <!-- /.container -->
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Script to Activate the Carousel -->
+    <script>
+        $('.carousel').carousel({
+            interval: 2000 //changes the speed
+        })
+    </script>
+</body>
+

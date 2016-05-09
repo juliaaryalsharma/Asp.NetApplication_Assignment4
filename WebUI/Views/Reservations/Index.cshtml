@@ -1,0 +1,82 @@
+@model IEnumerable<MidTermSolution.Models.Reservation>
+
+@{
+    ViewBag.Title = "SMOJK Reservations";
+}
+
+<h2>SMOJK Reservations</h2>
+
+<table class="table">
+    <tr>
+        <th>Reservation Date</th>
+        <th>Customer ID</th>
+        <th>Action</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ReservationDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerID)
+            </td>
+            <td>
+
+                @Html.ActionLink("Details", "Details", new { id = item.ReservationID })
+
+            </td>
+        </tr>
+    }
+
+</table>
+<body>
+
+
+    <!-- Page Content -->
+    <div class="container">
+        <!-- Marketing Icons Section -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Choose the rooms that have view of lake Ontario.
+                </h1>
+            </div>
+            <center><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2954260.9445184935!2d-80.17277688096632!3d43.68933816909186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4320505bde167%3A0x18582a629b4927e8!2sLake+Ontario!5e0!3m2!1sen!2sca!4v1461266833110" width="800" height="600" frameborder="0" style="border:0" allowfullscreen></iframe></center>
+        </div>
+        <!-- /.row -->
+        <!-- Exclusive Designs -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Choose The Room That You Like</h2>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="/img/Image2.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="/img/Image1.jpg" alt="">
+                </a>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <a href="portfolio-item.html">
+                    <img class="img-responsive img-portfolio img-hover" src="/img/Image4.jpg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- /.container -->
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+    <!-- Script to Activate the Carousel -->
+    <script>
+        $('.carousel').carousel({
+            interval: 2000 //changes the speed
+        })
+    </script>
+</body>
